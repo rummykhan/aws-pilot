@@ -1,0 +1,56 @@
+
+AWS / Laravel / Ubuntu / nix* / Nginx
+
+Project:
+--------
+    * Add Remote Server (AWS Server)
+        * Server Type: (Prod / Staging)
+        * Add PEM file
+            Path
+        
+        * Add User (login user)
+
+        * Add Web Server type (Nginx)
+            * Web Server configuration path (/etc/nginx)
+        
+    * Add Remote Workspace (Remote Directory)
+        * Mode: (Prod / Staging) (Cannot switch mode on remote)
+        * Remote Server
+        * Directory -> Site Name
+        * Git Repo + Branch
+
+    * Add Local Workspace (Local Directory)
+        * Mode: (Prod / Staging) (User can switch mode on local)
+        * Directory -> Site name
+        * Git Repo + Branch
+
+    One above is added, we can link local workspace to remote workspace
+
+
+Modules:
+--------
+    * Local Git module
+        * commit
+        * status
+        * push
+        * switch branch
+        * show branch
+
+    * Remote Git module
+        * pull
+
+    * Server module 
+        * run commands
+
+    * FTP Module
+        * fetch / Edit / Remove files
+    
+    * SCP Module
+        * Copy Files
+
+    * CLI Log Reader (Read and parse logs from the CLI)
+
+
+Future:
+-------
+    Server Monitoring (install agent on the server)
