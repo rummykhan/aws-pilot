@@ -1,0 +1,73 @@
+const EN = 'en';
+
+const Locale = {
+    EN
+};
+
+const MODEL_TYPE_ENVIRONMENT = 'MODEL_TYPE_ENVIRONMENT';
+const MODEL_TYPE_PROJECT = 'MODEL_TYPE_PROJECT';
+const MODEL_TYPE_SERVER = 'MODEL_TYPE_SERVER';
+const MODEL_TYPE_GIT = 'MODEL_TYPE_GIT';
+const MODEL_TYPE_WEB_SERVER = 'MODEL_TYPE_WEB_SERVER';
+const MODEL_TYPE_WORKSPACE = 'MODEL_TYPE_WORKSPACE';
+const MODEL_TYPE_REPOSITORY = 'MODEL_TYPE_REPOSITORY';
+const MODEL_TYPE_SYNC_LINK = 'MODEL_TYPE_SYNC_LINK';
+
+const ModelTypes = {
+    MODEL_TYPE_ENVIRONMENT,
+    MODEL_TYPE_PROJECT,
+    MODEL_TYPE_SERVER,
+    MODEL_TYPE_WEB_SERVER,
+    MODEL_TYPE_GIT,
+    MODEL_TYPE_WORKSPACE,
+    MODEL_TYPE_REPOSITORY,
+    MODEL_TYPE_SYNC_LINK,
+}
+
+const STAGE_BETA = 'BETA';
+const STAGE_GAMMA = 'GAMMA';
+const STAGE_PROD = 'PROD';
+
+const EnvironmentStage = {
+    STAGE_BETA,
+    STAGE_GAMMA,
+    STAGE_PROD,
+};
+
+const SERVER_TYPE_UBUNTU = 'UBUNTU';
+
+const ServerType = {
+    SERVER_TYPE_UBUNTU,
+};
+
+const WORKSPACE_TYPE_REMOTE = 'REMOTE';
+const WORKSPACE_TYPE_LOCAL = 'LOCAL';
+
+const WorkspaceType = {
+    WORKSPACE_TYPE_REMOTE,
+    WORKSPACE_TYPE_LOCAL
+};
+
+const SYNC_STRATEGY_GIT = 'GIT';
+const SYNC_STRATEGY_RSYNC = 'RSYNC';
+
+const SyncStrategy = {
+    SYNC_STRATEGY_GIT,
+    SYNC_STRATEGY_RSYNC
+};
+
+const WEB_SERVER_NGINX = 'NGINX';
+
+const WebServer = {
+    WEB_SERVER_NGINX
+};
+
+export {
+    Locale,
+    ModelTypes,
+    EnvironmentStage,
+    ServerType,
+    WorkspaceType,
+    SyncStrategy,
+    WebServer
+};

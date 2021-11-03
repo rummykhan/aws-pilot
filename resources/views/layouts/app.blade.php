@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title -->
-    <title>Welcome Page | Front - Admin &amp; Dashboard Template</title>
+    <title> {{ env('APP_NAME') }} | @yield('title') </title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
@@ -29,16 +28,11 @@
 
 @include('partials.header')
 
-@include('partials.sidebar')
+<div id="app">
+    <app-layout env="{{ env('APP_ENV') }}"/>
+</div>
 
-<main id="content" role="main" class="main">
-
-    @yield('content')
-
-    @include('partials.footer')
-
-</main>
-
+@include('partials.footer')
 
 <!-- JS Global Compulsory  -->
 <script src="{{ asset('/assets/vendor/jquery/dist/jquery.min.js') }}"></script>
@@ -62,14 +56,13 @@
         });
 
 
-
         // initialization of navbar vertical navigation
         var sidebar = $('.js-navbar-vertical-aside').hsSideNav();
 
         // initialization of tooltip in navbar vertical menu
-        $('.js-nav-tooltip-link').tooltip({ boundary: 'window' })
+        $('.js-nav-tooltip-link').tooltip({boundary: 'window'})
 
-        $(".js-nav-tooltip-link").on("show.bs.tooltip", function(e) {
+        $(".js-nav-tooltip-link").on("show.bs.tooltip", function (e) {
             if (!$("body").hasClass("navbar-vertical-aside-mini-mode")) {
                 return false;
             }
@@ -86,6 +79,13 @@
         });
     });
 </script>
+
+<script type="text/javascript">
+    window.SETTING_APP_URL = '{{ env('APP_URL') }}';
+    window.SETTING_BASE_URL = '{{ env('APP_URL') }}/api';
+</script>
+
+<script type="text/javascript" src="{{ asset('/js/app.js') }}?_={{ rand(100, 1000000) }}"></script>
 @yield('scripts')
 
 <!-- IE Support -->

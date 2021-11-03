@@ -11,10 +11,10 @@ import getters from './getters.js'
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-    plugins: [createPersistedState({
-        storage: window.localStorage,
-        key: 'aws-pilot',
-    })],
+    // plugins: [createPersistedState({
+    //     storage: window.localStorage,
+    //     key: 'aws-pilot',
+    // })],
     state,
     mutations,
     actions,

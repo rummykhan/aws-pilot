@@ -1,15 +1,30 @@
 import VueRouter from 'vue-router';
 import {
     HomePage,
+    EnvironmentPage,
+    ProjectPage,
 } from '../app/pages/index';
+
+import * as URL from "../app/network/urls/urls";
 
 const routes = [
     {
-        path: '/',
-        alias: '/',
+        path: URL.URL_HOME.url,
         component: HomePage,
-        name: 'home',
-        props: route => ({rSlug: route.params.slug}),
+        name: URL.URL_HOME.name,
+        //props: route => ({name: route.params.slug}),
+    },
+    {
+        path: URL.URL_ENV.url,
+        component: EnvironmentPage,
+        name: URL.URL_ENV.name,
+        //props: route => ({name: route.params.slug}),
+    },
+    {
+        path: URL.URL_PROJECTS_LIST.url,
+        component: ProjectPage,
+        name: URL.URL_PROJECTS_LIST.name,
+        //props: route => ({name: route.params.slug}),
     },
 ]
 

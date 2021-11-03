@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>This is Home Page</h1>
+        <h1>This is Environments Page</h1>
     </div>
 </template>
 <script type="text/babel">

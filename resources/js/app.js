@@ -6,8 +6,8 @@ import Vuex from 'vuex';
 import 'es6-promise/auto';
 import VueRouter from 'vue-router';
 import VueToast from 'vue-toast-notification';
-import 'vue-toast-notification/dist/theme-default.css'
-import './utility/filters'
+import 'vue-toast-notification/dist/theme-default.css';
+import './utility/filters';
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
